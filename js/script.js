@@ -22,11 +22,18 @@ console.log(sconto65);
 
 var prezzoFinale ;
 
-if (anni < 18) {
-  prezzoFinale = sconto20;
-} else if (anni > 65){
-  prezzoFinale = sconto65;
+if (isNaN(chilometri)) {
+  alert("non hai inserito un numero");
+} else if (isNaN(anni)){
+  alert("non hai inserito in numero");
 } else {
-  prezzoFinale = prezzoChilometri;
+  if (anni < 18) {
+    prezzoFinale = sconto20;
+  } else if (anni > 65){
+    prezzoFinale = sconto65;
+  } else {
+    prezzoFinale = prezzoChilometri;
+  }
 }
+
 document.getElementById('biglietto').innerHTML= prezzoFinale;
