@@ -13,9 +13,11 @@ var prezzoChilometri = prezzoBiglietto*chilometri;
 console.log(prezzoChilometri);
 
 var sconto20 = prezzoChilometri-((prezzoChilometri*20) /100);
+sconto20 = sconto20.toFixed(2);
 console.log(sconto20);
 
 var sconto65 = prezzoChilometri-((prezzoChilometri*40)/100);
+sconto65 = sconto65.toFixed(2);
 console.log(sconto65);
 
 var prezzoFinale = "..." ;
@@ -27,9 +29,9 @@ if (isNaN(chilometri)) {
   if (isNaN(anni)) {
     alert("non hai inserito un numero")
   } else{
-    if (anni < 18) {
+    if (anni <= 18) {
       prezzoFinale = sconto20;
-    } else if (anni > 65){
+    } else if (anni >= 65){
       prezzoFinale = sconto65;
     } else {
       prezzoFinale = prezzoChilometri;
