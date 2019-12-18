@@ -20,7 +20,7 @@ console.log(sconto20);
 var sconto65 = prezzoChilometri-((prezzoChilometri*40)/100);
 console.log(sconto65);
 
-var prezzoFinale ;
+var prezzoFinale = "..." ;
 
 if (isNaN(chilometri)) {
   alert("non hai inserito un numero");
